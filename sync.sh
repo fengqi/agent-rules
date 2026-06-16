@@ -18,6 +18,7 @@ DEFAULT_TARGETS=(
   "$HOME/.claude/CLAUDE.md"
   "$HOME/.config/opencode/AGENTS.md"
   "$HOME/.trae-cn/user_rules/rule-global.md"
+  "$HOME/.config/reasonix/REASONIX.md"
 )
 
 DRY_RUN=0
