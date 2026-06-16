@@ -2,10 +2,11 @@
 
 # Git 使用习惯
 
-- 新 git 项目使用 `master` 作为主分支名。
-- 公司项目通常包括 `csgo`、`social`、`unsolo` 等 GitLab 项目；不要默认直接在 `master` 上开发。
-- 公司项目开始编码前，先创建空 GitLab merge request，再基于 MR 分支改代码。
-- 热修复和即时性优化使用 `lyf/hotfix/<bug-or-optimization-name>`。
-- 跟随版本发布的功能和非即时性优化使用 `lyf/feature/<year>/<date>-<version>`，例如 `lyf/feature/2026/0519-7.46.5`。
-- 公司项目每完成一组相对独立的修改，可以 push 到远端并合并到 `dev`，然后切回原开发分支继续。
-- 对个人项目，尤其是 `github.com/fengqi` 这类仓库，通常可以直接在 `master` 上开发。
+- `git` 提交时除非特殊说明，必须使用中文
+- `git` 提交时拆分辅助函数、不同功能的修改
+- 不得在 `dev`、`stage`、`pre`、`master`、`main` 等具有独特意义的分支直接提交
+- 新 git 项目使用 `master` 作为主分支名，禁止使用 `main`。
+- 项目名称带有 `csgo`、`blued`、`unsolo` 字样的为公司项目
+- 公司项目热修复和即时性优化分支名模板：`lyf/hotfix/<bug-or-optimization-name>`。
+- 公司项目跟随版本发布的功能和非即时性优化分支名模板 `lyf/feature/<year>/<date>-<version>`，例如 `lyf/feature/2026/0519-7.46.5`。
+- 个人项目，例如 `github.com/fengqi` 这类仓库，通常可以直接在 `master` 上开发。
