@@ -8,6 +8,7 @@ MODULES=(
   "tone.md"
   "git.md"
   "php.md"
+  "lang.md"
   "go.md"
   "csgo.md"
 )
