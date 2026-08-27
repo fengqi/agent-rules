@@ -11,6 +11,7 @@ MODULES=(
   "lang.md"
   "go.md"
   "csgo.md"
+  "docs.md"
 )
 
 DEFAULT_TARGETS=(
