@@ -12,13 +12,13 @@
 - `php.md`：PHP 项目代码习惯。
 - `go.md`：Go 项目代码习惯。
 - `csgo.md`：CSGO 相关项目习惯。
-- `sync.sh`：按固定顺序拼接源文件，并同步到常见 agent 的默认规则文件。
+- `sync.js`：按固定顺序拼接源文件，并同步到常见 agent 的默认规则文件。跨平台（macOS / Linux / Windows），仅需 Node.js（0.10+），仅使用 ES5 语法与稳定核心 API，无第三方依赖。
 
 ## 使用
 
 ```bash
-./sync.sh --dry-run
-./sync.sh
+node sync.js --dry-run
+node sync.js
 ```
 
 默认目标：
@@ -29,8 +29,12 @@
 - `$HOME/.config/opencode/AGENTS.md`
 - `$HOME/.trae-cn/user_rules/rule-global.md`
 
-临时指定目标：
+临时指定目标（分隔符在 macOS / Linux 用 `:`，Windows 用 `;`）：
 
 ```bash
-AGENT_RULE_TARGETS="$HOME/.codex/AGENTS.md:$HOME/.gemini/GEMINI.md" ./sync.sh
+AGENT_RULE_TARGETS="$HOME/.codex/AGENTS.md:$HOME/.gemini/GEMINI.md" node sync.js
+```
+
+```powershell
+$env:AGENT_RULE_TARGETS = "$HOME\.codex\AGENTS.md;$HOME\.gemini\GEMINI.md"; node sync.js
 ```
