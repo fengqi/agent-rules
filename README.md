@@ -9,9 +9,11 @@
 - `base.md`：基础协作规则。
 - `tone.md`：回复语气规则。
 - `git.md`：Git 分支、MR 和 push 习惯。
+- `lang.md`：跨语言代码习惯。
 - `php.md`：PHP 项目代码习惯。
 - `go.md`：Go 项目代码习惯。
 - `csgo.md`：CSGO 相关项目习惯。
+- `review.md`：代码评审习惯（暂未纳入同步）。
 - `sync.js`：按固定顺序拼接源文件，并同步到常见 agent 的默认规则文件。跨平台（macOS / Linux / Windows），仅需 Node.js（0.10+），仅使用 ES5 语法与稳定核心 API，无第三方依赖。
 
 ## 使用

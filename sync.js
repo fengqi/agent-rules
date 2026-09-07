@@ -13,11 +13,10 @@ var MODULES = [
   "base.md",
   "tone.md",
   "git.md",
-  "php.md",
   "lang.md",
+  "php.md",
   "go.md",
-  "csgo.md",
-  "docs.md"
+  "csgo.md"
 ];
 
 // DELIM 是 AGENT_RULE_TARGETS 的分隔符：Windows 为 ;，macOS/Linux 为 :。
@@ -160,7 +159,8 @@ function buildContent(dir) {
     }
 
     parts.push("");
-    parts.push(kept.join("\n").replace(/\n$/, ""));
+    // 剥掉模块首尾的空行，统一由 buildContent 控制段落间为 1 个空行。
+    parts.push(kept.join("\n").replace(/^\n+/, "").replace(/\n+$/, ""));
   }
 
   return parts.join("\n") + "\n";
